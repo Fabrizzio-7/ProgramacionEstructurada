@@ -38,8 +38,8 @@ const rl = readline.createInterface({
 
 // Ejercicio 4
 
-rl.question("Ingrese el mensaje:", (mensaje)=>{
+/* rl.question("Ingrese el mensaje:", (mensaje)=>{
     const indiceError = mensaje.indexOf('error');
     console.log(` El índice de la primera ocurrencia de  'error' es: ${indiceError}`);
     rl.close();
-})
+}) */
