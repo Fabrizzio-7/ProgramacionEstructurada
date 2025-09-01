@@ -1,6 +1,8 @@
+import { Console } from "console";
+
 const name = "Eli";
-const edad = 30;
-const altura = 1.50;
+const age = 30;
+const heigt = 1.50;
 
 //Creacion de objetos con object literal
 const persona = {
@@ -31,9 +33,20 @@ persona.nombre="Elizabeth";
 console.log(persona)
 
 //Asignamos el valor del objeto a una variable
-const nom = persona.nombre;
-console.log(nom)
+/* const nom = persona.nombre;
+console.log(nom) */
 
 //Desructuring
-const {nombre} = persona;
+
+/* const {nombre} = persona;
 console.log(nombre);
+
+const {edad} = persona;
+console.log(edad) */
+
+const {nombre,edad} = persona
+Console.log(nombre)
+console.log(edad)
+
+
+
