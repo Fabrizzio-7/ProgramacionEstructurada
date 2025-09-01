@@ -49,17 +49,54 @@ const perfilUsuario ={
     }
 }
 
-console.log(perfilUsuario.infoPersonal)
-console.log(perfilUsuario.prefDeLaApp)
-console.log(perfilUsuario.estadisticaDeUso)
+console.log(perfilUsuario.infoPersonal);
+console.log(perfilUsuario.prefDeLaApp);
+console.log(perfilUsuario.estadisticaDeUso);
 
-perfilUsuario.prefDeLaApp.idioma= "Ingles"
+perfilUsuario.prefDeLaApp.idioma= "Ingles";
 
-perfilUsuario.estadisticaDeUso.ultimoAcceso = new Date()
+perfilUsuario.estadisticaDeUso.ultimoAcceso = new Date().toISOString().split("T")[0]; 
 
-delete perfilUsuario.prefDeLaApp.notificaciones
+delete perfilUsuario.prefDeLaApp.notificaciones;
 
-const {email} = perfilUsuario.infoPersonal
-const {idioma} = perfilUsuario.prefDeLaApp
+const {email} = perfilUsuario.infoPersonal;
+const {idioma} = perfilUsuario.prefDeLaApp;
 
-console.log(perfilUsuario)
+console.log(perfilUsuario);
+
+//Ejecicico3
+const libro = {
+    informacion: {
+        titulo: "Cien Años de Soledad",
+        autor: "Gabriel García Márquez",
+        genero: "Realismo mágico"
+    },
+    disponibilidad: {
+        copias: 10,
+        prestados: 4,
+        ubicacion: "Estante B3"
+    },
+    registro: {
+        fechaPublicacion: "1967-05-30",
+        fechaIngreso: "2020-10-15",
+        ultimaRevision: "2024-06-01"
+    }
+};
+
+console.log(libro.informacion.autor);
+
+const ejemplaresDisponibles = libro.disponibilidad.copias - libro.disponibilidad.prestados;
+console.log(ejemplaresDisponibles);
+
+libro.registro.ultimaRevision = new Date().toISOString().split("T")[0];
+
+
+libro.informacion.genero = "Novela histórica";
+
+const { titulo } = libro.informacion;
+const { ubicacion } = libro.disponibilidad;
+
+console.log(titulo);
+console.log(ubicacion);
+
+console.log(libro);
