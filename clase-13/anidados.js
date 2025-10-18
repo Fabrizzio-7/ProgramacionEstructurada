@@ -24,3 +24,8 @@ console.log(estudiante.direccion);
 //Modificamos propiedad
 estudiante.direccion.numCasa=20;
 console.log(estudiante.direccion);
+
+
+//eliminando propiedades del objeto anidado
+delete estudiante.direccion.numCasa
+console.log(estudiante.direccion)
